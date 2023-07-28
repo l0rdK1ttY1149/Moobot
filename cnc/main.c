@@ -18,15 +18,15 @@
 
 /* general configuration */
 #define MAXFDS 1000000
-#define AUTH_TIMEOUT 10
+#define AUTH_TIMEOUT 25
 #define EPOLL_TIMEOUT -1
 #define PHI 0x9e3779b9
 
 /* database configuration */
-#define NAME "botnet"
+#define NAME "ChatouNET"
 #define SERVER "localhost"
-#define USER "root"
-#define PASSWORD "nigger12345!"
+#define USER "chatounet"
+#define PASSWORD "thisisddbpasswd"
 
 static volatile int epoll_fd = 0, listen_fd = 0, reflectors = 0;
 static uint32_t x, y, z, w;
