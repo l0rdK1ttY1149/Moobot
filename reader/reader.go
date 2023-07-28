@@ -95,7 +95,7 @@ func (q *Queue) Append(elem interface{}) {
 	q.tail = (q.tail + 1) & (len(q.buf) - 1)
 	q.count++
 
-	q.notify()
+	//q.notify()
 
 	if q.count == 1 {
 		q.notEmpty.Broadcast()
